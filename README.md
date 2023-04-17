@@ -1,4 +1,4 @@
-# Controle de mensagem para WEB utilizando Springboot.
+# Controle de mensagem para WEB utilizando Java Springboot.
 
 <br>
  - O projeto foi desenvolvido no NetBeans e deve ser chamado springboot_mensagem.<br>
