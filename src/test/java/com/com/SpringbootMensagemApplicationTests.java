@@ -1,4 +1,4 @@
-package com.servico;
+package com.controle;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

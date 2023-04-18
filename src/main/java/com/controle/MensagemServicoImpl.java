@@ -1,31 +1,53 @@
 package com.controle;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Objeto com a implementação dos serviços.
  *
  * @author osmar
  */
-@Controller
+@RestController
 public class MensagemServicoImpl implements MensagemServico {
 
     private String mensagem;
 
-    @GetMapping("/getMensagem")  
+    @RequestMapping("/getMensagem")   
     @Override
     public String getMensagem() {
         System.out.println("Executando serviço getMensagem.");
-        return "Mensagem: " + mensagem;
+        //Formata a saída do método getMensagem
+        String paginaResultado = "<html>"
+                + "<head>"
+                + "<title>Mensagem</title>"
+                + "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />"
+                + "</head>"
+                + "<body>"
+                + "<h1>Resultado getMensagem</h1>"
+                + "getMensagem: " + mensagem
+                + "</body>" + "</html>";
+        return paginaResultado;
     }
 
-    @PostMapping("/setMensagem") 
+    @RequestMapping("/setMensagem")   
     @Override
     public String setMensagem(String mensagem) {
         System.out.println("Executando serviço setMensagem(string) :" + mensagem);
         this.mensagem = mensagem;
-        return getMensagem();
+     
+        //Formata a saída do método setMensagem
+        String paginaResultado = "<html>"
+                + "<head>"
+                + "<title>Mensagem</title>"
+                + "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />"
+                + "</head>"
+                + "<body>"
+                + "<h1>Resultado setMensagem</h1>"
+                + "setMensagem: " + mensagem
+                + "</body>" + "</html>";
+
+        return paginaResultado;
     }
 }
+
