@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.servico</groupId>
-	<artifactId>springboot_mensagem</artifactId>
+	<artifactId>springboot_mensagem_v1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot_mensagem</name>
+	<name>springboot_mensagem_v1</name>
 	<description>Springboot Serviço Mensagem</description>
 	<properties>
 		<java.version>1.8</java.version>

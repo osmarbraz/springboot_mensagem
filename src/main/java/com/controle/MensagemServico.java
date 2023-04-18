@@ -1,4 +1,4 @@
-package com.servico;
+package com.controle;
 
 /**
  * Interface dos serviços.
